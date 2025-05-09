@@ -35,7 +35,6 @@
         color: dark;
     }
 
-
     .admin-page .btn {
         display: inline-block;
         padding: 8px 12px;
@@ -91,11 +90,63 @@
         background-color: #7b1fa2; /* Темно-фиолетовый фон при наведении */
         color: white; /* Белый текст при наведении */
     }
+
+    .admin-page .filter-section {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .admin-page .filter-form {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .admin-page .filter-form select, 
+    .admin-page .filter-form button {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .admin-page .filter-form button {
+        background-color: #3490dc;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .admin-page .filter-form button:hover {
+        background-color: #2779bd;
+    }
+
 </style>
 
 <div class="container mx-auto px-4 py-8 admin-page">
     <h1 class="text-3xl font-bold mb-6">Управление заказами</h1>
     <a href="{{ route('admin.index') }}" class="btn btn-outline-purple">Назад</a>
+    
+    <!-- Секция фильтрации -->
+    <div class="filter-section">
+        <form action="{{ route('admin.orders') }}" method="GET" class="filter-form">
+            <select name="user_id" class="form-select">
+                <option value="">Все пользователи</option>
+                @foreach($users as $user)
+                    <option value="{{ $user->id }}" {{ request('user_id') == $user->id ? 'selected' : '' }}>
+                        {{ $user->first_name }} {{ $user->last_name }}
+                    </option>
+                @endforeach
+            </select>
+            
+            <button type="submit" class="btn btn-blue">Применить фильтр</button>
+            <a href="{{ route('admin.orders') }}" class="btn btn-outline-purple">Сбросить</a>
+        </form>
+    </div>
+
     <div class="table-container">
         <table class="w-full shadow-md rounded mb-4">
             <thead>

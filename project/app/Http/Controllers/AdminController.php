@@ -39,8 +39,21 @@ class AdminController extends Controller
     public function products()
     {
         $this->checkAdminAccess(); 
-        $products = Product::all(); // Получаем все продукты
-        return view('admin.products', compact('products')); 
+        
+        // Получаем все категории для фильтра
+        $categories = Category::where('available', '!=', 0)->get();
+        
+        // Начинаем запрос с загрузкой категории
+        $query = Product::with('category');
+        
+        // Фильтрация по категории
+        if(request()->has('category_id') && request('category_id') != '') {
+            $query->where('id_category', request('category_id'));
+        }
+        
+        $products = $query->get();
+        
+        return view('admin.products', compact('products', 'categories')); 
     }
 
     // Отображение формы редактирования продукта
@@ -154,9 +167,24 @@ class AdminController extends Controller
     //  список заказов
     public function orders()
     {
-        $this->checkAdminAccess(); 
-        $orders = Order::with('user')->get(); 
-        return view('admin.orders', compact('orders')); 
+    $this->checkAdminAccess(); 
+    
+    // Получаем всех пользователей кроме администраторов (роль 1) для фильтра
+    $users = User::where('role', '!=', 1)->get();
+    
+    // Начинаем запрос с загрузкой пользователя
+    $query = Order::with(['user' => function($query) {
+        $query->where('role', '!=', 1); // Исключаем заказы администраторов (если они есть)
+    }]);
+    
+    // Фильтрация по пользователю
+    if(request()->has('user_id') && request('user_id') != '') {
+        $query->where('id_user', request('user_id'));
+    }
+    
+    $orders = $query->get();
+    
+    return view('admin.orders', compact('orders', 'users')); 
     }
 
     // Обновление статуса заказа
@@ -237,7 +265,7 @@ class AdminController extends Controller
         'available.required' => 'Поле "Доступность" обязательно для заполнения.',
         'available.boolean' => 'Поле "Доступность" должно быть логическим значением.',
     ];
-
+ 
     // Валидация данных
     $request->validate($rules, $messages);
 

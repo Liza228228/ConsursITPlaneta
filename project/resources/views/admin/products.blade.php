@@ -65,7 +65,6 @@
 
     .admin-page .btn-outline-success:hover {
         background-color: #C71585; 
-       
     }
 
     .admin-page .btn-outline-purple {
@@ -78,17 +77,71 @@
         background-color: #7b1fa2; /* Темно-фиолетовый фон при наведении */
         color: white; /* Белый текст при наведении */
     }
+
+    .admin-page .filter-section {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .admin-page .filter-form {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .admin-page .filter-form select, 
+    .admin-page .filter-form button {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .admin-page .filter-form button {
+        background-color: #3490dc;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .admin-page .filter-form button:hover {
+        background-color: #2779bd;
+    }
+
 </style>
 
 <div class="container mx-auto px-4 py-8 admin-page">
     <h1 class="text-3xl font-bold mb-6">Управление продуктами</h1>
     <a href="{{ route('admin.index') }}" class="btn btn-outline-purple">Назад</a>
     <a href="{{ route('admin.products.create') }}" class="btn btn-outline-success">Добавить продукт</a>
+    
+    <!-- Секция фильтрации -->
+    <div class="filter-section">
+        <form action="{{ route('admin.products') }}" method="GET" class="filter-form">
+            <select name="category_id" class="form-select">
+                <option value="">Все категории</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id_category }}" {{ request('category_id') == $category->id_category ? 'selected' : '' }}>
+                        {{ $category->name_category }}
+                    </option>
+                @endforeach
+            </select>
+            
+            
+            <button type="submit" class="btn btn-blue">Применить фильтр</button>
+            <a href="{{ route('admin.products') }}" class="btn btn-outline-purple">Сбросить</a>
+        </form>
+    </div>
+
     <div class="table-container">
         <table class="w-full shadow-md rounded mb-4">
             <thead>
                 <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th class="py-3 px-6 text-left">Название</th>
+                    <th class="py-3 px-6 text-left">Категория</th>
                     <th class="py-3 px-6 text-left">Цена</th>
                     <th class="py-3 px-6 text-left">Количество</th>
                     <th class="py-3 px-6 text-left">Вес</th>
@@ -100,6 +153,7 @@
                 @foreach($products as $product)
                 <tr class="border-b border-gray-200 hover:bg-gray-100">
                     <td class="py-3 px-6 text-left">{{ $product->name_product }}</td>
+                    <td class="py-3 px-6 text-left">{{ $product->category->name_category ?? 'Без категории' }}</td>
                     <td class="py-3 px-6 text-left">{{ $product->price }}</td>
                     <td class="py-3 px-6 text-left">{{ $product->quantity }}</td>
                     <td class="py-3 px-6 text-left">{{ $product->weight }}</td>
