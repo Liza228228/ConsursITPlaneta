@@ -48,7 +48,7 @@
     </form>
     <form action="/logout" method="POST" style="display:inline;">
         @csrf
-        <button type="submit" class="btn btn-danger">Выйти</button>
+        <button type="submit" class="btn btn-danger text-dark">Выйти</button>
     </form>
 </div>
 
@@ -78,7 +78,7 @@
                         </ul>
                     </div>
                 @empty
-                    <p class="text-muted">У вас пока нет заказов.</p>
+                    <p class="text-muted">У вас нет заказов.</p>
                 @endforelse
             </div>
         </div>
@@ -176,6 +176,16 @@
         .card {
             border: none; /* Убираем чёрную обводку */
             box-shadow: none; /* Убирает тень, если была */
+        }
+        #editButton {
+        background-color: #FF1493; /* Цвет кнопки */
+        border-color: #FF1493; /* Цвет границы */
+        color: #000000; /* Цвет текста */
+    }
+
+        #editButton:hover {
+            background-color: #C71585; /* Цвет при наведении */
+            border-color: #C71585; /* Цвет границы при наведении */
         }
 
         .bg-purple {

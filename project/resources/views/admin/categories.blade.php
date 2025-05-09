@@ -3,7 +3,7 @@
 @section('content')
 <style>
     .admin-page {
-        background-color: #A9CDF0; /* Голубой фон */
+        background-color: rgb(212, 250, 250); /* Голубой фон */
         padding: 20px 0; /* Добавлен отступ сверху и снизу */
     }
 
@@ -17,7 +17,7 @@
     .admin-page .table-container {
         width: 100%;
         overflow-x: auto;
-        background-color: #A9CDF0; /* Голубой фон для контейнера таблицы */
+        background-color: #e0ffff; /* Голубой фон для контейнера таблицы */
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -37,7 +37,7 @@
     }
 
     .admin-page th {
-        background-color: #C4E4FE; /* Голубой фон для заголовка таблицы */
+        background-color: #e0ffff; /* Голубой фон для заголовка таблицы */
         color: black;
     }
 
@@ -72,13 +72,13 @@
     }
 
     .admin-page .btn-outline-success {
-        background-color: #38c172; /* Светло-зеленый фон */
+        background-color: #FF1493; 
         color: white; /* Белый текст */
-        border: 1px solid #38c172; /* Светло-зеленая рамка */
+        border: 1px solid #FF1493; 
     }
 
     .admin-page .btn-outline-success:hover {
-        background-color: #1f9d55; /* Темно-зеленый фон при наведении */
+        background-color: #C71585; 
     }
 
     .admin-page .btn-outline-purple {

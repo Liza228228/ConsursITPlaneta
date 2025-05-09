@@ -5,7 +5,7 @@
     <div class="order-success-content">
         <h1 class="order-success-title">Заказ успешно оформлен!</h1>
         <p class="order-success-message">Ваш заказ был успешно оформлен. Вы можете оплатить его наличными во время получения.</p>
-        <a href="{{ route('shop.catalog') }}" class="order-success-button">Вернуться в каталог</a>
+        <a href="{{ route('shop.catalog') }}" class="order-success-button">Вернуться к каталогу</a>
     </div>
      <!-- Контейнер для стилизции -->
     <div class="order-success-decor">
@@ -48,14 +48,14 @@
     .order-success-button {
         display: inline-block;
         padding: 0.75rem 1.5rem;
-        background: #2ecc71; /* Зеленый цвет кнопки */
-        color: #fff;
+        background: #FF1493; 
+        color: #000000;
         text-decoration: none;
         border-radius: 5px;
     }
  
     .order-success-button:hover {
-        background: #27ae60; /* Темнее зеленый цвет при наведении */
+        background: #C71585; 
     }
      /* Контейнер для стиля */
     .order-success-decor {

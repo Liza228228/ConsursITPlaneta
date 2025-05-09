@@ -3,7 +3,7 @@
 @section('content')
 <style>
      .admin-page {
-        background-color: #A9CDF0; /* Голубой фон */
+        background-color: rgb(212, 250, 250); /* Голубой фон */
     }
 
     .admin-page .container {
@@ -31,7 +31,7 @@
     }
 
     .admin-page th {
-        background-color: #C4E4FE; /* голубой фон для заголовка таблицы */
+        background-color: #e0ffff; /* голубой фон для заголовка таблицы */
         color: dark;
     }
 

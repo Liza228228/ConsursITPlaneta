@@ -43,14 +43,14 @@
     .product a {
         display: inline-block;
         padding: 5px 10px;
-        background-color: #007bff;
-        color: #fff;
+        background-color: #FFB6C1;
+        color: #000000;
         text-decoration: none;
         border-radius: 5px;
     }
 
     .product a:hover {
-        background-color: #0056b3;
+        background-color: #FF69B4;
     }
 
     .product form {

@@ -15,12 +15,12 @@
 }
 
 .admin-page .btn-blue {
-    background-color: #85E4FF;
+    background-color: #FF1493;
     color: dark;
 }
 
 .admin-page .btn-blue:hover {
-    background-color: #2779bd;
+    background-color: #C71585;
 }
 
 </style>

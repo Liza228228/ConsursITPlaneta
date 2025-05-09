@@ -6,7 +6,7 @@
 <style>
     .cart {
         width: 100%;
-        background-color: peachpuff; /* Персиковый цвет */
+        background-color:rgb(255, 217, 217); 
         padding: 20px;
         box-sizing: border-box;
     }
@@ -43,7 +43,7 @@
     }
 
     .cart .product-price {
-        color: #8139ED;
+        color: #000000;
         margin-right: 20px;
     }
 
@@ -63,7 +63,7 @@
         height: 30px;
         border-radius: 50%;
         border: none;
-        background-color: #8139ED;
+        background-color: #C71585;
         color: #fff;
         font-size: 16px;
         cursor: pointer;
@@ -86,8 +86,8 @@
     .cart .product-actions button,
     .cart .checkout-button {
         padding: 10px 20px;
-        background-color: #28a745;
-        color: #fff;
+        background-color: #FFB6C1;
+        color: #000000;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -95,27 +95,27 @@
 
     .cart .product-actions button:hover,
     .cart .checkout-button:hover {
-        background-color: #218838;
+        background-color: #FF69B4;
     }
 
     .cart p {
         margin: 10px 0;
         text-align: center;
     }
-
+ 
     .cart a {
         display: inline-block;
         margin-top: 20px;
         padding: 10px 20px;
-        background-color: #8139ED;
-        color: #fff;
+        background-color: #FF1493;
+        color: #000000;
         text-decoration: none;
         border-radius: 5px;
         text-align: center;
     }
 
     .cart a:hover {
-        background-color: #8139ED;
+        background-color: #C71585;
     }
 </style>
 

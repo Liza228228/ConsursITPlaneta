@@ -43,7 +43,7 @@
     .product-actions a, .product-actions button {
         display: inline-block;
         padding: 10px 20px;
-        color: #fff;
+        color: #000000;
         text-decoration: none;
         border: none;
         border-radius: 5px;
@@ -51,20 +51,20 @@
     }
 
     .product-actions a {
-        background-color: #007bff;
+        background-color: #FFB6C1;
     }
 
     .product-actions a:hover {
-        background-color: #0056b3;
+        background-color: #FF69B4;
     }
 
     .product-actions button {
-        background-color: #28a745; /* Зеленый цвет */
+        background-color: #FF1493; 
         margin-left: 10px;
     }
 
     .product-actions button:hover {
-        background-color: #218838; /* Темно-зеленый цвет при наведении */
+        background-color: #C71585; 
     }
 </style>
 

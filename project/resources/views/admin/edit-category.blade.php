@@ -3,7 +3,7 @@
 @section('content')
 <style>
     .admin-page {
-        background-color: #87CEEB; /* Голубой фон */
+        background-color: #e0ffff; /* Голубой фон */
         color: black; /* Черный текст */
     }
 

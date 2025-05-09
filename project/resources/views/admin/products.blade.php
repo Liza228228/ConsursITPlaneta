@@ -3,7 +3,7 @@
 @section('content')
 <style>
     .admin-page {
-        background-color: #A9CDF0; /* Голубой фон */
+        background-color: rgb(212, 250, 250); /* Голубой фон */
     }
 
     .admin-page .container {
@@ -31,7 +31,7 @@
     }
 
     .admin-page th {
-        background-color: #C4E4FE; /* голубой фон для заголовка таблицы */
+        background-color: #e0ffff; /* голубой фон для заголовка таблицы */
         color: dark;
     }
 
@@ -55,18 +55,17 @@
 
     .admin-page .btn-outline-danger:hover {
         background-color: #cc1f1a; /* Темно-красный фон при наведении */
-        color: white; /* Белый текст при наведении */
     }
 
     .admin-page .btn-outline-success {
-        background-color: #38c172; /* Светло-зеленый фон */
+        background-color: #FF1493; 
         color: black; /* Черный текст */
-        border: 1px solid #38c172; /* Светло-зеленая рамка */
+        border: 1px solid #FF1493; 
     }
 
     .admin-page .btn-outline-success:hover {
-        background-color: #1f9d55; /* Темно-зеленый фон при наведении */
-        color: white; /* Белый текст при наведении */
+        background-color: #C71585; 
+       
     }
 
     .admin-page .btn-outline-purple {

@@ -3,7 +3,7 @@
 @section('content')
 <style>
     .admin-page {
-        background-color: #87CEEB; /* Голубой фон */
+        background-color: #e0ffff; /* Голубой фон */
         color: black; /* Черный текст */
         padding: 20px 0; /* Добавлен отступ сверху и снизу */
     }
@@ -19,7 +19,7 @@
         width: 100%;
         max-width: 1000px; /* Увеличена ширина формы */
         margin: 0 auto;
-        background-color: #87CEEB; /* Голубой фон для контейнера */
+        background-color: #e0ffff; /* Голубой фон для контейнера */
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }

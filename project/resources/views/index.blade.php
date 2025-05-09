@@ -48,15 +48,12 @@
 
 <div class="main-container">
     <div class="image-container">
-        <img src="{{ asset('images/main/left.jpg') }}" alt="Левое изображение кондитерской">
+        <img src="{{ asset('images/main/right.jpg') }}" alt="Левое изображение кондитерской">
     </div>
     <div class="text-container">
         <h1>Добро пожаловать в нашу кондитерскую!</h1>
         <p>Мы создаем вкусные сладости из качественных ингредиентов. 
         Наша команда делает праздники еще слаще!</p>
-    </div>
-    <div class="image-container">
-        <img src="{{ asset('images/main/right.jpg') }}" alt="Правое изображение кондитерской">
     </div>
 </div>
 @endsection
