@@ -55,11 +55,11 @@
 
     .product form {
         display: inline-block;
-    }
+    } 
 
     .product button {
         padding: 5px 10px;
-        background-color: #28a745;
+        background-color: #FF1493;
         color: #fff;
         border: none;
         border-radius: 5px;
@@ -67,7 +67,7 @@
     }
 
     .product button:hover {
-        background-color: #218838;
+        background-color:  #C71585;
     }
 </style>
 
