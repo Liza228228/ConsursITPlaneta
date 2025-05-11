@@ -16,7 +16,7 @@
      /* Контейнер для изображений */
     .image-container {
         flex: 1;
-        max-width: 600px;
+        max-width: 450px;
     }
     /* Стили для изображений */
     .image-container img {
