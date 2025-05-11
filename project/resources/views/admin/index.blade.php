@@ -22,7 +22,6 @@
 .admin-page .btn-blue:hover {
     background-color:rgb(248, 58, 178);
 }
-
 </style>
 
 <div class="container mx-auto px-4 py-8 admin-page">
